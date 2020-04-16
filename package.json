@@ -1,38 +1,82 @@
 {
-	"name": "leaky-bucket",
+	"name": "@good-idea/leaky-bucket",
 	"description": "A fast and efficient leaky bucket implementation",
-	"version": "3.0.4",
+	"version": "3.1.0",
 	"homepage": "https://github.com/eventEmitter/leaky-bucket",
-	"author": "Lina van der Weg <lina@joinbox.com> (http://joinbox.com/)",
+	"author": "Lina van der Weg <lina@joinbox.com> (http://joinbox.com/) and Joseph Thomas <joseph@good-idea.studio>",
 	"license": "MIT",
 	"repository": {
-		"url": "https://github.com/eventEmitter/leaky-bucket.git",
+		"url": "https://github.com/good-idea/leaky-bucket.git",
 		"type": "git"
 	},
 	"engines": {
-		"node": ">=v4.2"
+		"node": ">=v10.18"
 	},
+	"scripts": {
+		"cm": "git-cz",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"build": "rollup -c",
+		"fix": "run-s fix:*",
+		"fix:prettier": "prettier \"src/**/*.ts\" --write",
+		"dev": "rollup -cw",
+		"release": "semantic-release"
+	},
+	"main": "lib/index.js",
+	"module": "lib/index.es.js",
 	"bugs": {
-		"url": "https://github.com/eventEmitter/leaky-bucket/issues"
+		"url": "https://github.com/good-idea/leaky-bucket/issues"
 	},
 	"dependencies": {
 		"debug": "^4.1.1"
 	},
 	"devDependencies": {
+		"@commitlint/config-conventional": "^8.3.4",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/exec": "^3.3.2",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.7",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+		"@types/debug": "^4.1.5",
+		"@types/jest": "^25.2.1",
+		"@types/node": "^13.11.1",
+		"@types/prettier": "^2.0.0",
+		"@types/semantic-release": "^15.13.1",
+		"@types/standard-version": "^7.0.0",
+		"commitizen": "^4.0.4",
+		"commitlint": "^8.3.5",
+		"cz-conventional-changelog": "^3.1.0",
+		"husky": "^4.2.5",
+		"jest": "^25.3.0",
+		"prettier": "^2.0.4",
+		"pretty-quick": "^2.0.1",
 		"rollup": "^2.6.1",
-		"section-tests": "^2.2.4"
+		"rollup-plugin-typescript2": "^0.27.0",
+		"run-s": "^0.0.0",
+		"section-tests": "^2.2.4",
+		"semantic-release": "^17.0.4",
+		"standard-version": "^7.1.0",
+		"ts-jest": "^25.3.1",
+		"typescript": "^3.8.3"
 	},
 	"optionalDependencies": {},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+			"pre-commit": "pretty-quick --staged"
+		}
+	},
 	"keywords": [
 		"leaky-bucket",
 		"leaky",
-		"bucket"
-	],
-	"scripts": {
-		"test": "node --experimental-modules --no-warnings ./node_modules/.bin/section ./test/*.mjs --ld",
-		"build": "rollup -c",
-		"watch": "rollup -cw"
-	},
-	"main": "lib/index.js",
-	"module": "lib/index.es.js"
+		"bucket",
+		"rate-limit"
+	]
 }
