@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/good-idea/leaky-bucket/compare/v3.1.1...v3.1.2) (2020-04-17)
+
+
+### Bug Fixes
+
+* add codecov scripts ([0bfd1fa](https://github.com/good-idea/leaky-bucket/commit/0bfd1fae6f4fed0f810d3b0abe41545e52947ec1))
+
 ## [3.1.1](https://github.com/good-idea/leaky-bucket/compare/v3.1.0...v3.1.1) (2020-04-17)
 
 
