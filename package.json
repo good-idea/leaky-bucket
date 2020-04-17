@@ -9,10 +9,6 @@
 		"url": "https://github.com/good-idea/leaky-bucket.git",
 		"type": "git"
 	},
-  "private": false,
-	"engines": {
-		"node": ">=v10.18"
-	},
 	"scripts": {
 		"cm": "git-cz",
 		"test": "jest",
@@ -35,7 +31,11 @@
 	"bugs": {
 		"url": "https://github.com/good-idea/leaky-bucket/issues"
 	},
-	"dependencies": {
+  "private": false,
+	"engines": {
+		"node": ">=v10.18"
+	},
+"dependencies": {
 		"debug": "^4.1.1"
 	},
 	"devDependencies": {
