@@ -20,7 +20,7 @@
 		"fix": "run-s fix:*",
 		"fix:prettier": "prettier \"src/**/*.ts\" --write",
 		"dev": "rollup -cw",
-		"release": "semantic-release"
+		"semantic-release": "semantic-release"
 	},
 	"main": "lib/index.js",
 	"module": "lib/index.es.js",
