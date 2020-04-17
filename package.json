@@ -25,6 +25,13 @@
 	},
 	"main": "lib/index.js",
 	"module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
 	"bugs": {
 		"url": "https://github.com/good-idea/leaky-bucket/issues"
 	},
