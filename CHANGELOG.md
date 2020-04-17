@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/good-idea/leaky-bucket/compare/v3.1.0...v3.1.1) (2020-04-17)
+
+
+### Bug Fixes
+
+* test fix for release ([404d5f6](https://github.com/good-idea/leaky-bucket/commit/404d5f65a1c08e7098ef5c8c65904300c5233dc3))
+
 # [3.1.0](https://github.com/good-idea/leaky-bucket/compare/v3.0.4...v3.1.0) (2020-04-17)
 
 
